@@ -152,6 +152,69 @@ git pull
 
 After that check the update. Does it match the commit? If it matches then the update is complete and you have the latest version.
 
+# Troubleshoot with Laragon 
+
+There are several options to run Laravel, you can use artisan, or directly by excute index.php. If you want to run without artisan here is the easiest way 
+
+1. Seeting the Laragon Apache web server config 
+
+Apache.conf  
+
+Emable mod_rewrite.so
+```
+LoadModule rewrite_module modules/mod_rewrite.so 
+```
+
+2. Change the document root with your project name 
+
+![image](https://github.com/user-attachments/assets/f5cc137b-a4f2-447e-a767-96800f211510)
+
+3. Then save, after that restart the Laragon 
+
+4. Access it on web browser 
+
+![image](https://github.com/user-attachments/assets/c1f8656b-4f68-4f97-b5d3-50c285b3f4d2)
+
+5. Change ip to domain 
+
+Linux 
+```
+sudo mousepad /etc/hosts 
+```
+
+Add like below
+
+Example 
+```
+<IP>  laravuln.local
+```
+
+Open this file using notepad 
+
+Windows
+```
+c:/windows/system32/drives/etc/hosts
+```
+
+Add like below
+
+Example 
+```
+<IP>  laravuln.local
+```
+
+Then save it 
+
+Here example image 
+
+Linux 
+
+![image](https://github.com/user-attachments/assets/155ff40a-6973-4682-b13d-40f07339bab2)
+
+Windows 
+
+![image](https://static.helpjuice.com/helpjuice_production/uploads/upload/image/6547/787797/Syarif_-_cara_menambahkan_record_sementara_pada_file_host_di_windows_revdon_-_Attachment_3)
+
 # Other 
 
 Added on here
