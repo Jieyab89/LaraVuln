@@ -1,0 +1,29 @@
+Hi there is uptade from manager 
+
+The results of the discussion about product updates that are being developed there are some that need to be updated 
+
+such as 
+
+1. New features for managing users on the superadmin dashboard
+2. Admin can only monitor a traffic 
+3. Superadmin is held by the manager 
+4. vip users can upload a video and get benefits in the form of gifts from a traffic feeds
+5. Admin can create a blog 
+
+Developer and IT staff 
+
+Login to mysql 
+
+root:admin1234# 
+
+Login to the hosting server 
+
+abubu:12345password
+
+Github key 
+
+9012-2901-0941 
+
+smtp login for gmail
+
+babu@moi.local:localadmin123
