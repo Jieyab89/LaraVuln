@@ -25,8 +25,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    // HERE TO FIX THE IDOR OR EXPOSED DATA REQUEST WILL BE HIDE (HIDE ALL RECORD)
+    //'name', 'email', 'pin', 'address', 'phone_number', 'email_verified_at', 'remember_token', 'created_at', 'updated_at', 'password',
+    //
+    
     protected $hidden = [
-        'name', 'email', 'pin', 'address', 'phone_number', 'email_verified_at', 'remember_token', 'created_at', 'updated_at', 'password',
+        'password'
     ];
 
     /**
