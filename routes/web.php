@@ -29,6 +29,7 @@ Route::get('/api/v1/account/user/{user:id}', 'ApiController@get_users')->name('u
 // BAC
 Route::get('/account/user/', 'DashboardUserController@profile_user_get_page')->name('user.profile');
 Route::get('/account/user/{user:id}', 'DashboardUserController@profile_user_get_data')->name('user.data');
+Route::post('/account/user/update/{user:id}', 'DashboardUserController@profile_user_update')->name('user.data.update');
 
 // ---- END VULNER ----
 

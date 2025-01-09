@@ -213,8 +213,8 @@ Linux
 
 Windows 
 
-![image](https://static.helpjuice.com/helpjuice_production/uploads/upload/image/6547/787797/Syarif_-_cara_menambahkan_record_sementara_pada_file_host_di_windows_revdon_-_Attachment_3)
+![image](https://github.com/user-attachments/assets/fd6b53f6-58de-4a5d-8e99-046c13c7c6ec)
 
 # Other 
 
-Added on here
+If my code is bad and there are some mistakes, feel free to be corrected. As in the repository everything, thank you for your corrections and contributions

@@ -18,6 +18,7 @@
                         <a class="list-group-item" href="{{ route('home') }}">Uprgade Plan</a>
                         <a class="list-group-item" href="{{ route('home') }}">Post Feed</a>
                         <a class="list-group-item" href="{{ route('home') }}">Subdomain Scanner</a>
+                        <a class="list-group-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                     </ul>
                 </div>
             </div>
