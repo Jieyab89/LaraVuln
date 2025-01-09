@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\User;
+
+// ONLY USED FOR LOGIN AUTH AKA HOME DASHBOARD
 
 class HomeController extends Controller
 {

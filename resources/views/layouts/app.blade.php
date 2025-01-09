@@ -51,7 +51,7 @@
                             <a class="nav-link" href="{{ route('index') }}">{{ __('Feed') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('index') }}">{{ __('Guide') }}</a>
+                            <a class="nav-link" href="{{ route('guide.index') }}">{{ __('Guide') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('dev.notes') }}">{{ __('Developer Notes') }}</a>
@@ -72,6 +72,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('home') }}">
+                                        {{ __('Home') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

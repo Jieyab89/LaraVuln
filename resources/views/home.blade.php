@@ -13,8 +13,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    <ul class="list-group list-group-flush">
+                        <a class="list-group-item" href="{{ route('user.profile') }}">Profile</a>
+                        <a class="list-group-item" href="{{ route('home') }}">Uprgade Plan</a>
+                        <a class="list-group-item" href="{{ route('home') }}">Post Feed</a>
+                        <a class="list-group-item" href="{{ route('home') }}">Subdomain Scanner</a>
+                    </ul>
                 </div>
             </div>
         </div>
