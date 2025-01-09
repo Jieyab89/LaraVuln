@@ -10,4 +10,9 @@ class GuideController extends Controller
     {
         return view('guide.index');
     }
+
+    public function idor()
+    {
+        return view('guide.idor');
+    }
 }

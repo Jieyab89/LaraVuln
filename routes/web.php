@@ -15,10 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 // GUIDE HOW TO SOLVE AND FIX 
 Route::get('/guide', 'GuideController@index')->name('guide.index');
+Route::get('/guide-idor', 'GuideController@idor')->name('guide.idor');
+// END GUIDE HOW TO SOLVE AND FIX 
 
 // MAIN PAGE 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/developer-notes', 'MainController@developer_notes')->name('dev.notes');
+//  END MAIN PAGE 
 
 // ---- START VULNER ----
 
@@ -35,6 +38,8 @@ Route::post('/account/user/update/{user:id}', 'DashboardUserController@profile_u
 
 // AUTH ROUTES 
 Auth::routes();
+// END AUTH 
 
 // DASHBOARD USER 
 Route::get('/home', 'HomeController@index')->name('home'); // ONLY USED FOR LOGIN AUTH AKA HOME DASHBOARD
+// END DASHBOARD USER

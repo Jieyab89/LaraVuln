@@ -42,6 +42,12 @@
                                 <td>Make beautiful web page UI</td>
                                 <td>To do</td>
                             </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Added race conition vulnerability</td>
+                                <td>Race condition vulnerability to bussines logic</td>
+                                <td>To do</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

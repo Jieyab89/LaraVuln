@@ -103,7 +103,7 @@
     <div class="sidebar" id="sidebar">
       <h4>Documentation</h4>
       <div class="nav flex-column">
-        <a class="nav-link active" href="{{ route('guide.idor') }}">IDOR</a>
+        <a class="nav-link active" href="#">IDOR</a>
         <a class="nav-link" href="#">BAC</a>
         <a class="nav-link" href="#">Information Disclosure</a>
         <a class="nav-link" href="#">Security Misconfiguration</a>
@@ -124,8 +124,9 @@
 
     <!-- Main Content -->
     <div class="content">
-      <h1>Welcome to LaraVuln Documentation</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, sapiente. Quibusdam ipsum placeat veniam! Aliquam id quam fugit, mollitia ducimus, culpa sed dolores similique vero perspiciatis modi, debitis vitae et?</p>
+      <h1>IDOR Exploit</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, sapiente. Quibusdam ipsum placeat veniam! Aliquam id quam fugit, mollitia ducimus, culpa sed dolores similique vero perspiciatis modi, debitis vitae et?</p>
+      <h1>IDOR Fix</h1>
     </div>
   </div>
 

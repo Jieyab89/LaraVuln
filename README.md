@@ -217,4 +217,4 @@ Windows
 
 # Other 
 
-If my code is bad and there are some mistakes, feel free to be corrected. As in the repository everything, thank you for your corrections and contributions
+If my code is bad and there are some mistakes, feel free to be corrected. As in the repository everything, thank you for your corrections and contributions, if any problem please let me know
