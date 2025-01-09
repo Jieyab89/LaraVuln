@@ -117,7 +117,7 @@ Tadaaaaa, vuln pwned
 
 Maybee not, because the AD (Active Directory) setup is quite an effort, but I have set up myself on my laptop, there is a domain controller and client. If this repository is busy and growing maybe I will make it more like a box
 
-Or you can go it alone, to set up some running services, the operating system being used, as well as access to get the domain controller or root, maybe I can add in a new sub folder 
+Or you can go it self, to set up some running services, the operating system being used, as well as access to get the domain controller or root, maybe I can add in a new sub folder 
 
 # Docker Script and Other Preq Script 
 
