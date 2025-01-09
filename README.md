@@ -2,6 +2,11 @@
 
 This project was developed by Jieyab and the community, the purpose of this project is to create labs for web security, but it focuses on using Laravel and PHP, you can use this project to learn or modify without any credit, you can use pentest techniques such as using scanners, injection, business logic as well as several test scenarios such as black box, gray box and white box, some have missconfig in the source code and exposed information through Git and other things.
 
+# Snapshoot 
+
+![image](https://github.com/user-attachments/assets/f40a7151-c76a-49d7-be8d-2aca8c4482fc)
+![image](https://github.com/user-attachments/assets/6776944f-4141-497f-ba16-7f16a3b894eb)
+
 # Requirements and Preparation
 
 1. Laragon or other web server. Recommendation use Apache or Nginx 
@@ -131,6 +136,22 @@ run
 ```
 php reset_database.php
 ```
+# Update the Application 
+
+1. You can run this command 
+
+```
+git fetch 
+```
+
+then 
+
+```
+git pull 
+```
+
+After that check the update. Does it match the commit? If it matches then the update is complete and you have the latest version.
+
 # Other 
 
 Added on here
