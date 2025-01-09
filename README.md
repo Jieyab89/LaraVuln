@@ -1,78 +1,136 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# LaraVuln
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This project was developed by Jieyab and the community, the purpose of this project is to create labs for web security, but it focuses on using Laravel and PHP, you can use this project to learn or modify without any credit, you can use pentest techniques such as using scanners, injection, business logic as well as several test scenarios such as black box, gray box and white box, some have missconfig in the source code and exposed information through Git and other things.
 
-## About Laravel
+# Requirements and Preparation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Laragon or other web server. Recommendation use Apache or Nginx 
+2. Mysql 
+3. Php version 7.3 
+4. Composer 
+5. Code editor 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clone this repository 
 
-## Learning Laravel
+SSH
+```
+git@github.com:Jieyab89/OSINT-Cheat-sheet.git
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+HTTPS
+```
+https://github.com/Jieyab89/OSINT-Cheat-sheet.git
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. After that run this command 
 
-## Laravel Sponsors
+On the project folder run this 
+```
+composer install && update
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Linux 
+```
+cp .env.example .env
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+Windows
+```
+copy .env.example .env
+```
 
-## Contributing
+```
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. Edit your .env to configure database and other 
 
-## Code of Conduct
+> DB_CONNECTION=mysql
+> 
+> DB_HOST=127.0.0.1
+> 
+> DB_PORT=3306
+> 
+> DB_DATABASE=your database
+> 
+> DB_USERNAME=your username
+> 
+> DB_PASSWORD=your password
+> 
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. And then dont forget to migrate database 
 
-## Security Vulnerabilities
+```
+php artisan migrate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+run db seeder for dummy data
+```
+php artisan db:seed
+```
 
-## License
+run your application 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+php artisan serve
+```
+
+If any error please let me know 
+
+# Scenario Attack Simulation 
+
+## Initial Access
+
+Enum port or dir on host or IP -> find mysql port -> crack hash 
+
+Idor -> leak username and email for login-> brute force the password  
+
+## Foothold 
+
+There is an file upload  for rabbit hole 
+
+RCE command injection or other -> reverse shell 
+
+Missconfig -> CVE or from debugger -> reverse shell 
+
+SQL Injection -> upload shell into outfile -> revershe shell 
+
+git history -> get information -> reverse shell 
+
+## Privilage Escalation  
+
+XSS stored -> steal cookie -> admin -> injection -> reverse shell 
+
+Weak auth -> login into admin -> injection -> reverse shell 
+
+IDOR -> change account data admin -> injection -> reverse shell 
+
+*If you want make more about privilage escalation you need the settup machine 
+
+There is much tecnique for privilage escalation into host or machine for example SUID, human error, software CVE, missconfig, credential stuffing and other  
+
+Tadaaaaa, vuln pwned 
+
+## This Integrated with AD?
+
+Maybee not, because the AD (Active Directory) setup is quite an effort, but I have set up myself on my laptop, there is a domain controller and client. If this repository is busy and growing maybe I will make it more like a box
+
+Or you can go it alone, to set up some running services, the operating system being used, as well as access to get the domain controller or root, maybe I can add in a new sub folder 
+
+# Docker Script and Other Preq Script 
+
+In this possible case I will add some scripts to simplify the maintenance and safety of your machine. And some exploits require bot scripts like XSS for example. I will probably add this here, please be patient
+
+# Reset Application 
+
+Make sure your in folder application 
+
+run 
+```
+php reset_database.php
+```
+# Other 
+
+Added on here
