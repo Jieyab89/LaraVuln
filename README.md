@@ -126,7 +126,47 @@ Or you can go it self, to set up some running services, the operating system bei
 
 # Docker Script and Other Preq Script 
 
-In this possible case I will add some scripts to simplify the maintenance and safety of your machine. And some exploits require bot scripts like XSS for example. I will probably add this here, please be patient
+### Docker Script
+
+#### 1. Update Environment File
+
+Open the `.env-docker.example` file and update it with your details:
+
+```plaintext
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+Replace the placeholders with your actual database information.
+
+#### 2. Install Docker and Docker Compose
+
+If you don't have Docker and Docker Compose installed, follow this guide for Ubuntu:
+
+- [Install Docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
+
+#### 3. Run Docker Compose
+
+Once Docker is installed, run the following command in your project folder:
+
+```bash
+docker compose up -d --build
+```
+
+This will build and run your containers in the background.
+
+> please make sure the php container service is totally up.
+> use `docker logs php` command to see the latest output before accessing application.
+
+#### 4. Wait for Initialization
+
+Wait 1-2 minutes for the containers to be fully set up.
+
+You can access the application by accessing: http://localhost:8080
 
 # Reset Application 
 

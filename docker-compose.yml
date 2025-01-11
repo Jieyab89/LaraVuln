@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: ./compose/php
+    container_name: php
+    volumes:
+      - .:/src
+    networks:
+      - laravel
+    depends_on:
+      - mysql
+    command: >
+      bash -c "
+        cp .env-docker.example .env &&
+        composer install &&
+        php artisan key:generate &&
+        php artisan migrate:reset &&
+        php artisan migrate &&
+        php artisan db:seed &&
+        php-fpm
+      "
+      
+  nginx:
+    build:
+      context: ./compose/nginx
+    container_name: web-server
+    volumes:
+      - .:/src
+    ports:
+      - "8080:80"
+    networks:
+      - laravel
+    depends_on:
+      - php
+
+  mysql:
+    build:
+      context: ./compose/mysql
+    container_name: mysql
+    environment:
+      DB_DATABASE: ${MYSQL_DATABASE}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - laravel
+
+volumes:
+  db_data:
+
+networks:
+  laravel:
