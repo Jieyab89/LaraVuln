@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1 class="text-center mb-4">Infinite Scroll Example</h1>
-
+    <h1 class="text-center mb-4">LaraVuln Feeds</h1>
     <div id="content-container" class="row">
         @foreach ($feeds as $data)
         <div class="container mt-5">
