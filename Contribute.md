@@ -10,20 +10,35 @@ Welcome open source. Thank for contrib on this repo
 example 
 
 > /node_modules
+> 
 > /public/hot
+> 
 > /public/storage
+> 
 > /storage/*.key
+> 
 > /vendor
+> 
 > .env
+> 
 > .env.backup
+> 
 > .phpunit.result.cache
+> 
 > Homestead.json
+> 
 > Homestead.yaml
+> 
 > npm-debug.log
+> 
 > yarn-error.log
+> 
 > *.log
+> 
 > /public/attachment
+> 
 > /public/feeds-media
+> 
 > /storage/*
 
 3. Add comment on the code will you change 
