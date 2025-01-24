@@ -166,6 +166,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Unrestricted File Upload</h5>
+                        <p class="card-text">Sending malicious file upload and perform Dos in the server</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

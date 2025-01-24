@@ -93,6 +93,25 @@
         cursor: pointer;
         font-size: 1.25rem;
       }
+
+      ul {
+        list-style-type: none; /* Menghilangkan bullet pada <li> */
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        display: flex;
+        justify-content: center; /* Untuk memposisikan gambar di tengah */
+        align-items: center;
+      }
+
+      img {
+        max-width: 100%; /* Agar gambar tidak lebih besar dari elemen pembungkus */
+        height: auto; /* Mempertahankan rasio gambar */
+        display: block; /* Menghilangkan jarak ekstra pada elemen inline */
+      }
+
     }
   </style>
 </head>
@@ -103,17 +122,18 @@
     <div class="sidebar" id="sidebar">
       <h4>Documentation</h4>
       <div class="nav flex-column">
-        <a class="nav-link active" href="#">IDOR</a>
-        <a class="nav-link" href="#">BAC</a>
-        <a class="nav-link" href="#">Information Disclosure</a>
-        <a class="nav-link" href="#">Security Misconfiguration</a>
-        <a class="nav-link" href="#">Weak Authentication</a>
-        <a class="nav-link" href="#">Command Injection</a>
-        <a class="nav-link" href="#">LFI</a>
-        <a class="nav-link" href="#">Insecure Design</a>
-        <a class="nav-link" href="#">Cross-Site Scripting</a>
-        <a class="nav-link" href="#">Guide CVSS Risk Rate</a>
-        <a class="nav-link" href="#">....</a>
+      <a class="nav-link active" href="{{ route('guide.index') }}">Home</a>
+        <a class="nav-link active" href="{{ route('guide.idor') }}">IDOR</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">BAC</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Information Disclosure</a>
+        <a class="nav-link" href="{{ route('guide.missconf') }}">Security Misconfiguration</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Weak Authentication</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Command Injection</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">LFI</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Insecure Design</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Cross-Site Scripting</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Guide CVSS Risk Rate</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">....</a>
       </div>
     </div>
 
@@ -124,9 +144,27 @@
 
     <!-- Main Content -->
     <div class="content">
-      <h1>IDOR Exploit</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, sapiente. Quibusdam ipsum placeat veniam! Aliquam id quam fugit, mollitia ducimus, culpa sed dolores similique vero perspiciatis modi, debitis vitae et?</p>
-      <h1>IDOR Fix</h1>
+      <h1>IDOR</h1>
+        <p>Insecure direct object references (IDOR) are a type of access control vulnerability that arises when an application uses user-supplied input to access objects directly. The term IDOR was popularized by its appearance in the OWASP 2007 Top Ten.</p>
+        <h1>IDOR at profiles</h1>
+        <h1>Step</h1>
+        <ol>
+            <li>
+              <video class="embed-responsive-item" autoplay loop controls>
+                  <source src="/Guides/IDOR/IDOR.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+            </li>
+        </ol>
+        <h1>CVSS risk rate</h1>
+        <p><b>IDOR at Profiles</b></p>
+        <p>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N</p>
+      <h1>How to Fix</h1>
+      <ol>
+        <li><p>Verify the user's permission every time an access attempt is made. Implement this structurally using the recommended approach for your web framework.</p></li>
+        <li><p>Add UUID so that it is difficult to guess when doing get data</p></li>
+        <li><p>Avoid exposing identifiers in URLs and POST bodies if possible</p></li>
+      </ol>
     </div>
   </div>
 

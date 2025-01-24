@@ -13,14 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// TEST ROUTING 
+
+// TEST CUSTOM REDIRECT ROUTES VS META TAG 
+
+// CUSTOM .ENV, .GIT ROUTES (RESEARCH)
+
+Route::get('/.env', function () {
+    return "Hello, World!";
+});
+
+// END TEST ROUTING 
+
 // GUIDE HOW TO SOLVE AND FIX 
+
 Route::get('/guide', 'GuideController@index')->name('guide.index');
 Route::get('/guide-idor', 'GuideController@idor')->name('guide.idor');
+Route::get('/guide-missconfig', 'GuideController@missconf')->name('guide.missconf');
+
 // END GUIDE HOW TO SOLVE AND FIX 
 
 // MAIN PAGE 
+
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/developer-notes', 'MainController@developer_notes')->name('dev.notes');
+Route::get('/Laravuln-feeds', 'MainController@feeds')->name('feeds');
+Route::get('/infinite-scroll', 'MainController@feeds_loader')->name('feeds.scroll');
+
 //  END MAIN PAGE 
 
 // ---- START VULNER ----
@@ -33,6 +52,15 @@ Route::get('/api/v1/account/user/{user:id}', 'ApiController@get_users')->name('u
 Route::get('/account/user/', 'DashboardUserController@profile_user_get_page')->name('user.profile');
 Route::get('/account/user/{user:id}', 'DashboardUserController@profile_user_get_data')->name('user.data');
 Route::post('/account/user/update/{user:id}', 'DashboardUserController@profile_user_update')->name('user.data.update');
+
+// FILE UPLOAD 
+Route::group(['prefix' => '', 'middleware' => 'auth'], function () {
+    Route::get('/upgrade/membership-plan/', 'DashboardUserController@updgradeplan')->name('user.plan');
+    Route::get('/faq-sugesstion', 'DashboardUserController@suggestion')->name('user.suggesstion');
+    Route::post('/faq-sugesstion-deliver/send', 'DashboardUserController@suggestion_deliver')->name('user.suggesstion.send');
+    Route::get('/user/post-feeds', 'DashboardUserController@make_feeds')->name('user.feeds');
+    Route::post('/user/post-feeds/send', 'DashboardUserController@feeds_send')->name('user.feeds.send');
+});
 
 // ---- END VULNER ----
 

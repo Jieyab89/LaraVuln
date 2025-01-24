@@ -7,11 +7,6 @@
           <div class="alert alert-success">
             {!! session('success.up') !!}
           </div>
-      @endif
-      @if(session('success.down'))
-          <div class="alert alert-danger">
-            {!! session('success.down') !!}
-          </div>
     @endif
  <div class="card">
   <div class="container">

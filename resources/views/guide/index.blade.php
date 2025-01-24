@@ -103,17 +103,18 @@
     <div class="sidebar" id="sidebar">
       <h4>Documentation</h4>
       <div class="nav flex-column">
+        <a class="nav-link active" href="{{ route('guide.index') }}">Home</a>
         <a class="nav-link active" href="{{ route('guide.idor') }}">IDOR</a>
-        <a class="nav-link" href="#">BAC</a>
-        <a class="nav-link" href="#">Information Disclosure</a>
-        <a class="nav-link" href="#">Security Misconfiguration</a>
-        <a class="nav-link" href="#">Weak Authentication</a>
-        <a class="nav-link" href="#">Command Injection</a>
-        <a class="nav-link" href="#">LFI</a>
-        <a class="nav-link" href="#">Insecure Design</a>
-        <a class="nav-link" href="#">Cross-Site Scripting</a>
-        <a class="nav-link" href="#">Guide CVSS Risk Rate</a>
-        <a class="nav-link" href="#">....</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">BAC</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Information Disclosure</a>
+        <a class="nav-link" href="{{ route('guide.missconf') }}">Security Misconfiguration</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Weak Authentication</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Command Injection</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">LFI</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Insecure Design</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Cross-Site Scripting</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">Guide CVSS Risk Rate</a>
+        <a class="nav-link" href="{{ route('guide.index') }}">....</a>
       </div>
     </div>
 

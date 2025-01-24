@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\User;
+use App\Faqs;
+use App\Feeds;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Support\Str;
 
 class DashboardUserController extends Controller
 {
@@ -64,5 +67,86 @@ class DashboardUserController extends Controller
         $user->save();
 
         return redirect()->route('user.data', ['user' => $user->id])->with(['success.up' => 'Data: '.$request->name.' Edited!']);
+    }
+
+    public function updgradeplan()
+    {
+        return view('users.plan');
+    }
+
+    // processs func upgrapde plan 
+
+    // end processs func upgrapde plan 
+
+    public function suggestion()
+    {
+        return view('users.faq');
+    }
+
+    public function suggestion_deliver(Request $request)
+    {
+        //dd(1);
+        $this->validate($request, [
+            'email' => 'min:1|max:255|required|email',
+            'subject' => 'min:3|max:225|required',
+            'message' => 'min:5|max:255|required',
+            'file' => 'required|mimes:pdf',
+        ]);
+
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+        $uuid = (string) Str::uuid();
+        $file = $request->file('file');
+        $saved = time() . "_" . $uuid . "." . $file->getClientOriginalExtension();
+        $uploadDir = 'attachment';
+
+        $file->move(public_path($uploadDir), $saved);
+
+        Faqs::create([
+            'user_id' => $id,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+            'file' => $saved,
+        ]);
+
+        return redirect()->route('user.suggesstion', ['user' => $user->id])->with(['success.up' => 'Your questions '.$request->subject.' Success! Please waiting to reply']);
+
+        //return view('users.faq');
+    }
+
+    public function make_feeds()
+    {
+        return view('users.feeds');
+    }
+
+    public function feeds_send(Request $request)
+    {
+        //dd(1);
+        $this->validate($request, [
+            'title' => 'min:1|max:255|required',
+            'content' => 'min:3|required',
+            'media' => 'required|mimes:jpeg,jpg,png,gif,mp4', 
+        ]);
+
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+        $uuid = (string) Str::uuid();
+        $file = $request->file('media');
+        $saved = time() . "-Laravuln-Feeds-" . $uuid . "." . $file->getClientOriginalExtension();
+        $uploadDir = 'feeds-media';
+
+        $file->move(public_path($uploadDir), $saved);
+
+        Feeds::create([
+            'user_id' => $id,
+            'title' => $request->title,
+            'content' => $request->content,
+            'media' => $saved,
+        ]);
+
+        return redirect()->route('user.feeds', ['user' => $user->id])->with(['success.up' => 'Your feeds '.$request->subject.' Success! Upload']);
+
+        //return view('users.faq');
     }
 }

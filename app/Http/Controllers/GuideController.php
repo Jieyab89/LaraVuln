@@ -15,4 +15,9 @@ class GuideController extends Controller
     {
         return view('guide.idor');
     }
+
+    public function missconf()
+    {
+        return view('guide.missconf');
+    }
 }

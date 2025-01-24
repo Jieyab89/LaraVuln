@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Notes for update') }}</div>
                 <div class="table-responsive">
                     <table class="table">
-                        <caption>Will update and progress</caption>
+                        <caption>&nbsp;*Will update and progress</caption>
                         <thead>
                             <tr>
                             <th scope="col">#</th>
@@ -22,13 +22,13 @@
                                 <th scope="row">1</th>
                                 <td>Added docker compose & container</td>
                                 <td>Settings script for docker</td>
-                                <td>To do</td>
+                                <td>Done</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>Added auto reset data like database, sciprt and payload was excuted</td>
                                 <td>Make script for reset data after pentest or hacked this web apps</td>
-                                <td>To do</td>
+                                <td>Done</td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
