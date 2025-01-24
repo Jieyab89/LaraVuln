@@ -14,6 +14,7 @@ function clearCache() {
     Artisan::call('config:clear');
     Artisan::call('route:clear');
     Artisan::call('view:clear');
+    Artisan::call('optimize:clear');
 }
 
 function resetDatabase() {
@@ -47,4 +48,4 @@ resetDatabase();
 
 runSeeder();
 
-echo "Finished, database success reset.\n";
+echo "Finished, database success reset........ [OK]\n";
