@@ -13,3 +13,4 @@ yarn-error.log
 *.log
 /public/attachment
 /public/feeds-media
+/storage/*

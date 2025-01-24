@@ -4,9 +4,9 @@
 
 <div class="container">
     @if(session('success.up'))
-          <div class="alert alert-success">
+        <div class="alert alert-success">
             {!! session('success.up') !!}
-          </div>
+        </div>
     @endif
  <div class="card">
   <div class="container">
