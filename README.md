@@ -176,6 +176,12 @@ run
 ```
 php reset_database.php
 ```
+
+then 
+```
+php artisan serve
+```
+
 # Update the Application 
 
 1. You can run this command 
@@ -229,9 +235,10 @@ Example
 <IP>  laravuln.local
 ```
 
+Windows
+
 Open this file using notepad 
 
-Windows
 ```
 c:/windows/system32/drives/etc/hosts
 ```
