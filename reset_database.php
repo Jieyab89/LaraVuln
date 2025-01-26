@@ -105,4 +105,4 @@ deleteDirectories();
 createDirectories(); 
 runSeeder();
 echo "\n======= LARAVULN ======= \n";
-echo "[SUCCESS] Finished, database success reset........ [OK]\n";
+echo "[SUCCESS] Finished, database & application success reset........ [OK]\n";
