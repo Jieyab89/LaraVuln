@@ -21,12 +21,12 @@ This project was developed by Jieyab and the community, the purpose of this proj
 
 SSH
 ```
-git@github.com:Jieyab89/OSINT-Cheat-sheet.git
+git@github.com:Jieyab89/LaraVuln.git
 ```
 
 HTTPS
 ```
-https://github.com/Jieyab89/OSINT-Cheat-sheet.git
+https://github.com/Jieyab89/LaraVuln.git
 ```
 
 2. After that run this command 
